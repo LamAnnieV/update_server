@@ -23,7 +23,7 @@ sudo apt upgrade 2>&1|grep " upgraded" | cut -d "," -f 1 >> /home/ubuntu/Build_S
 #Open the crontab file 
 ##sudo crontab -e
 
-#The schedule to execute  a shell script every Friday at 11pm EST or 3am UTC time and to put derrors in executing the shell script into  a log file
-##*3 * * * 5 bash /home/ubuntu/Build_Script_1/update_server.sh > /var/log/build_script_log.log 2>&1
+#The schedule to execute  a shell script every Friday at 11pm EST or 3am UTC time and to redirect standard errors into  a log file
+##0 3 * * 5 bash /home/ubuntu/Build_Script_1/update_server.sh > /var/log/build_script_log.log 2>&1
 
 exit 0
